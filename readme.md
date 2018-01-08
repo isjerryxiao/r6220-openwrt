@@ -1,6 +1,6 @@
 # OpenWRT dist
 [![Build Status](https://travis-ci.org/Jerry981028/r6220-openwrt.svg?branch=master)](https://travis-ci.org/Jerry981028/r6220-openwrt)  
-Build with Travis Ci daily.  
+Build with Travis Ci daily. 2018/1/8  
 This project is only for OpenWRT routers. Currently it's based on 17.01.04.  
 [You may want original project here.](http://openwrt-dist.sourceforge.net)
 
