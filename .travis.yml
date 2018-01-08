@@ -67,4 +67,5 @@ after_success:
 - git config user.email "bot@github.com"
 - git add .
 - git commit -m "$TAG"
-- git push --force --quiet "https://${GitHub_Token}@github.com/Jerry981028/r6220-openwrt.git" HEAD:$TAG
+- target_arch=ramips
+- git push --force --quiet "https://${GitHub_Token}@github.com/Jerry981028/r6220-openwrt.git" HEAD:$target_arch
