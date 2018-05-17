@@ -6,15 +6,16 @@ This project is only for OpenWRT routers.
 
 ## Usage
 You can use the following command to get architecture.  
-`opkg print-architecture | awk '{print $2}'`
+`opkg print-architecture |awk '{print $2}' |tail -n 1`  
+First, check your architecture before proceeding to the next steps. It should be `mipsel_24kc`.
 
-Then, check your architecture in all branches and add the following line to `/etc/opkg.conf`. 
+Then, add the following line to `/etc/opkg.conf`. 
 ```
-src/gz simonsmh_base https://github.com/Jerry981028/r6220-openwrt/raw/{architecture}/packages/{architecture}/base
-src/gz simonsmh_packages https://github.com/Jerry981028/r6220-openwrt/raw/{architecture}/targets/{architecture}/{architecture}/packages
+src/gz simonsmh_base https://github.com/Jerry981028/r6220-openwrt/raw/ramips/packages/mipsel_24kc/base
+src/gz simonsmh_packages https://github.com/Jerry981028/r6220-openwrt/raw/ramips/targets/ramips/mt7621/packages
 ```
 
-Then install what you want.
+Now, you can install whatever you want.
 ```
 opkg update
 opkg install ChinaDNS
