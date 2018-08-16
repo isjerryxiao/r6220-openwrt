@@ -6,14 +6,11 @@ branches:
     - master
 addons:
   apt:
-    sources:
-    - ubuntu-toolchain-r-test
     packages:
     - libssl-dev
     - libev-dev
     - libc-ares-dev
     - libudns-dev
-    - libstdc++-4.9-dev
 env:
 - SDK_URL=https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-sdk-ramips-mt7621_gcc-7.3.0_musl.Linux-x86_64.tar.xz
 install:
@@ -41,10 +38,10 @@ before_script:
 # NFS
 - git clone https://github.com/simonsmh/luci-app-nfs package/luci-app-nfs
 # Dependency
-- git clone https://github.com/shadowsocks/openwrt-feeds package/custom
+#- git clone https://github.com/shadowsocks/openwrt-feeds package/custom
 - pushd package/openwrt-dist-luci/tools/po2lmo ; make && sudo make install ; popd
 - ./scripts/feeds update -a
-- ./scripts/feeds install libopenssl
+- ./scripts/feeds install libopenssl libmbedtls libcares libev libsodium pcre
 script:
 - make defconfig
 - make prereq V=s
