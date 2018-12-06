@@ -69,4 +69,4 @@ after_success:
 - git add .
 - git commit -m "$TAG"
 - target_arch=ramips
-- git push --force --quiet "https://${GitHub_Token}@github.com/Jerry981028/r6220-openwrt.git" HEAD:$target_arch
+- git push --force --quiet "https://${GitHub_Token}@github.com/isjerryxiao/r6220-openwrt.git" HEAD:$target_arch

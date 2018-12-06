@@ -1,5 +1,5 @@
 # OpenWRT dist
-[![Build Status](https://travis-ci.org/Jerry981028/r6220-openwrt.svg?branch=master)](https://travis-ci.org/Jerry981028/r6220-openwrt)  
+[![Build Status](https://travis-ci.org/isjerryxiao/r6220-openwrt.svg?branch=master)](https://travis-ci.org/isjerryxiao/r6220-openwrt)  
 Build with Travis Ci.  
 This project is only for OpenWRT routers.
 [You may want original project here.](http://openwrt-dist.sourceforge.net)
@@ -11,8 +11,8 @@ First, check your architecture before proceeding to the next steps. It should be
 
 Then, add the following line to `/etc/opkg.conf`. 
 ```
-src/gz simonsmh_base https://github.com/Jerry981028/r6220-openwrt/raw/ramips/packages/mipsel_24kc/base
-src/gz simonsmh_packages https://github.com/Jerry981028/r6220-openwrt/raw/ramips/targets/ramips/mt7621/packages
+src/gz simonsmh_base https://github.com/isjerryxiao/r6220-openwrt/raw/ramips/packages/mipsel_24kc/base
+src/gz simonsmh_packages https://github.com/isjerryxiao/r6220-openwrt/raw/ramips/targets/ramips/mt7621/packages
 ```
 
 Now, you can install whatever you want.
@@ -36,4 +36,4 @@ You can also search and install them in LuCI or SCP/FTP upload these downloaded 
 GPLv3
 
 ## Credit
-Copyright © 2017 simonsmh
+Copyright © 2019 simonsmh
