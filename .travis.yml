@@ -12,7 +12,7 @@ addons:
     - libc-ares-dev
     - libudns-dev
 env:
-- SDK_URL=https://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7621/openwrt-sdk-18.06.1-ramips-mt7621_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+- SDK_URL=https://downloads.openwrt.org/releases/18.06.2/targets/ramips/mt7621/openwrt-sdk-18.06.2-ramips-mt7621_gcc-7.3.0_musl.Linux-x86_64.tar.xz
 install:
 - export TAG=$(basename -s .tar.xz $(basename $SDK_URL))
 - wget $SDK_URL
