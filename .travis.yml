@@ -1,6 +1,6 @@
 language: c
 cache: ccache
-dist: trusty
+dist: bionic
 branches:
   only:
     - master
@@ -11,13 +11,26 @@ addons:
     - libev-dev
     - libc-ares-dev
     - libudns-dev
+    - libncurses-dev
+
 env:
-- SDK_URL=https://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-sdk-18.06.4-ramips-mt7621_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+ - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ipq806x/generic/openwrt-sdk-19.07.0-rc1-ipq806x-generic_gcc-7.4.0_musl_eabi.Linux-x86_64.tar.xz
+#- SDK_URL=https://downloads.openwrt.org/releases/18.06.4/targets/ipq40xx/generic/openwrt-sdk-18.06.4-ipq40xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
+ - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ar71xx/generic/openwrt-sdk-19.07.0-rc1-ar71xx-generic_gcc-7.4.0_musl.Linux-x86_64.tar.xz
+ - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ramips/mt7621/openwrt-sdk-19.07.0-rc1-ramips-mt7621_gcc-7.4.0_musl.Linux-x86_64.tar.xz
+
+
 install:
-- export TAG=$(basename -s .tar.xz $(basename $SDK_URL))
 - wget $SDK_URL
-- tar xf $(basename $SDK_URL)
-- cd *$TAG*
+- export SDK_FILE=${SDK_URL##*/}
+- export SDK_HOME=${SDK_FILE%*.tar.xz}
+- TAG=${SDK_URL#*targets/*}
+- export TAG=${TAG%%/*}
+- test -n $TAG
+- tar xf $SDK_FILE
+- cd $SDK_HOME
+
+
 before_script:
 # Shadowsocks
 - git clone https://github.com/shadowsocks/luci-app-shadowsocks package/luci-app-shadowsocks
@@ -37,14 +50,22 @@ before_script:
 - git clone https://github.com/techotaku/luci-app-transparent-proxy package/luci-app-transparent-proxy
 # NFS
 - git clone https://github.com/simonsmh/luci-app-nfs package/luci-app-nfs
+# V2Ray
+- git clone https://github.com/kuoruan/openwrt-v2ray package/v2ray-core
+- git clone https://github.com/kuoruan/luci-app-v2ray package/luci-app-v2ray
+# V2Ray-Plugin
+- git clone https://github.com/honwen/openwrt-v2ray-plugin package/v2ray-plugin
 # Dependency
-#- git clone https://github.com/shadowsocks/openwrt-feeds package/custom
+# git clone https://github.com/shadowsocks/openwrt-feeds package/custom
 - pushd package/openwrt-dist-luci/tools/po2lmo ; make && sudo make install ; popd
 - ./scripts/feeds update -a
 - ./scripts/feeds install libopenssl libmbedtls libcares libev libsodium pcre
+
+
 script:
 - make defconfig
-- make prereq V=s
+#-make prereq V=s
+
 # Compile packages
 - make package/luci-app-shadowsocks/compile V=s
 - make package/shadowsocks-libev/compile V=s
@@ -58,9 +79,15 @@ script:
 - make package/luci-app-vlmcsd/compile V=s
 - make package/luci-app-transparent-proxy/compile V=s
 - make package/luci-app-nfs/compile V=s
+#-make package/v2ray-core/compile V=s
+#-make package/luci-app-v2ray/compile V=s
+- make package/v2ray-plugin/compile V=s
+
 # Generate packages.gz
 - ./staging_dir/host/bin/usign -G -s ./key-build -p ./key-build.pub -c "Local build key"
 - make package/index V=s
+
+
 after_success:
 - cd bin
 - git init
@@ -68,5 +95,4 @@ after_success:
 - git config user.email "bot@github.com"
 - git add .
 - git commit -m "$TAG"
-- target_arch=ramips
-- git push --force --quiet "https://${GitHub_Token}@github.com/isjerryxiao/r6220-openwrt.git" HEAD:$target_arch
+- git push --force --quiet "https://${GitHub_Token}@github.com/isjerryxiao/r6220-openwrt.git" HEAD:$TAG
