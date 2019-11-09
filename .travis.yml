@@ -15,7 +15,7 @@ addons:
 
 env:
  - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ipq806x/generic/openwrt-sdk-19.07.0-rc1-ipq806x-generic_gcc-7.4.0_musl_eabi.Linux-x86_64.tar.xz
-#- SDK_URL=https://downloads.openwrt.org/releases/18.06.4/targets/ipq40xx/generic/openwrt-sdk-18.06.4-ipq40xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
+ - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ipq40xx/generic/openwrt-sdk-19.07.0-rc1-ipq40xx-generic_gcc-7.4.0_musl_eabi.Linux-x86_64.tar.xz
  - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ar71xx/generic/openwrt-sdk-19.07.0-rc1-ar71xx-generic_gcc-7.4.0_musl.Linux-x86_64.tar.xz
  - SDK_URL=https://downloads.openwrt.org/releases/19.07.0-rc1/targets/ramips/mt7621/openwrt-sdk-19.07.0-rc1-ramips-mt7621_gcc-7.4.0_musl.Linux-x86_64.tar.xz
 
@@ -56,10 +56,10 @@ before_script:
 # V2Ray-Plugin
 - git clone https://github.com/honwen/openwrt-v2ray-plugin package/v2ray-plugin
 # Dependency
-# git clone https://github.com/shadowsocks/openwrt-feeds package/custom
+- git clone https://github.com/shadowsocks/openwrt-feeds package/custom
 - pushd package/openwrt-dist-luci/tools/po2lmo ; make && sudo make install ; popd
 - ./scripts/feeds update -a
-- ./scripts/feeds install libopenssl libmbedtls libcares libev libsodium pcre
+- ./scripts/feeds install golang #c-ares libev libsodium mbedtls pcre
 
 
 script:
@@ -79,8 +79,8 @@ script:
 - make package/luci-app-vlmcsd/compile V=s
 - make package/luci-app-transparent-proxy/compile V=s
 - make package/luci-app-nfs/compile V=s
-#-make package/v2ray-core/compile V=s
-#-make package/luci-app-v2ray/compile V=s
+- make package/v2ray-core/compile V=s
+- make package/luci-app-v2ray/compile V=s
 - make package/v2ray-plugin/compile V=s
 
 # Generate packages.gz
