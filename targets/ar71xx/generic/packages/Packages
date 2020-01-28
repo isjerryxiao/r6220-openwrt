@@ -1,0 +1,71 @@
+Package: libatomic1
+Version: 7.4.0-2
+Depends: libgcc1
+Provides: libatomic
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Architecture: mips_24kc
+Installed-Size: 5458
+Filename: libatomic1_7.4.0-2_mips_24kc.ipk
+Size: 6198
+SHA256sum: a85f6b796e84b63f55efdddc581cf0725f6f962f8f3c65456c3c9ec47c3853e6
+Description:  Atomic support library
+
+Package: libgcc1
+Version: 7.4.0-2
+Provides: libgcc
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Architecture: mips_24kc
+Installed-Size: 34357
+Filename: libgcc1_7.4.0-2_mips_24kc.ipk
+Size: 35164
+SHA256sum: 1f96b17846ab7ee4b16b1608d1b04eeec5eab19f146efaea56837fbd94f1a2f2
+Description:  GCC support library
+
+Package: libpthread
+Version: 1.1.24-2
+Depends: libgcc1
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Architecture: mips_24kc
+Installed-Size: 117
+Filename: libpthread_1.1.24-2_mips_24kc.ipk
+Size: 856
+SHA256sum: fe7dfb113fff67cd2c041d1f1a71ffdee457d672e0e26d318029824c6c9d4977
+Description:  POSIX thread library
+
+Package: librt
+Version: 1.1.24-2
+Depends: libpthread
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Architecture: mips_24kc
+Installed-Size: 117
+Filename: librt_1.1.24-2_mips_24kc.ipk
+Size: 864
+SHA256sum: cc93b2ae3cb811a87453486999ea76380364c16229ca5fe175fd03bbf25ba57d
+Description:  POSIX.1b RealTime extension library
+
+Package: libstdcpp6
+Version: 7.4.0-2
+Provides: libstdcpp
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Architecture: mips_24kc
+Installed-Size: 387174
+Filename: libstdcpp6_7.4.0-2_mips_24kc.ipk
+Size: 385013
+SHA256sum: 28748233c3d9b742a9150cf6116cd204a7bff3e9ef02c453cd9186a2d60f41b3
+Description:  GNU Standard C++ Library v3
+

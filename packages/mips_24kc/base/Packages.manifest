@@ -1,0 +1,457 @@
+Package: ChinaDNS
+Version: 1.3.3-1
+Depends: libc
+Source: package/chinadns
+SourceName: ChinaDNS
+License: GPLv3
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: mips_24kc
+Installed-Size: 36179
+Filename: ChinaDNS_1.3.3-1_mips_24kc.ipk
+Size: 35769
+SHA256sum: e61f737f8fadad93fde0c90af33d2d054c60546cffb74bf00a2e4efd59ee3fe6
+Description:  Protect yourself against DNS poisoning in China.
+
+Package: dns-forwarder
+Version: 1.2.1-2
+Depends: libc
+Source: package/dns-forwarder
+SourceName: dns-forwarder
+License: GPLv3
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: mips_24kc
+Installed-Size: 8818
+Filename: dns-forwarder_1.2.1-2_mips_24kc.ipk
+Size: 9595
+SHA256sum: f263e14b7bce5e2a3337c2d109035fd07b3e8f50441eead8cbec91c11e0dee13
+Description:  Forwarding DNS queries on TCP transport.
+
+Package: libcares
+Version: 1.15.0-4
+Depends: libc
+Source: package/custom/packages/libcares
+SourceName: libcares
+License: MIT
+Section: libs
+Maintainer: Karl Palsson <karlp@etactica.com>
+Architecture: mips_24kc
+Installed-Size: 31642
+Filename: libcares_1.15.0-4_mips_24kc.ipk
+Size: 32480
+SHA256sum: 3e5cace1bc64ac42435d5850311aba794dbefa289349c10b5c08a17ea789de3a
+Description:  c-ares is a C library for asynchronous DNS requests (including name resolves)
+ 
+ C89 compatibility, MIT licensed, builds for and runs on POSIX, Windows,
+ Netware, Android and many more operating systems.
+ 
+
+Package: libev
+Version: 4.27-1
+Depends: libc
+Source: package/custom/packages/libev
+SourceName: libev
+License: BSD-2-Clause
+Section: libs
+Maintainer: Karl Palsson <karlp@tweak.net.au>
+Architecture: mips_24kc
+Installed-Size: 22873
+Filename: libev_4.27-1_mips_24kc.ipk
+Size: 23635
+SHA256sum: aa21e34a7036ec21990b490af23cb765d48885f59269931e36035e373f551bea
+Description:  A full-featured and high-performance event loop that is loosely modelled after
+ libevent, but without its limitations and bugs.
+
+Package: libmbedtls12
+Version: 2.16.2-2
+Depends: libc
+Provides: libmbedtls
+Source: package/custom/base/mbedtls
+SourceName: libmbedtls
+License: GPL-2.0+
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 182303
+Filename: libmbedtls12_2.16.2-2_mips_24kc.ipk
+Size: 182633
+SHA256sum: aefa038ddb884f904f14a5cec1b7d1f66f0d54e8e59d5123aa76fa3402525263
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains the mbedtls library.
+
+Package: libpcre
+Version: 8.43-1
+Depends: libc
+Source: package/custom/packages/pcre
+SourceName: libpcre
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: libs
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Architecture: mips_24kc
+Installed-Size: 88257
+Filename: libpcre_8.43-1_mips_24kc.ipk
+Size: 89042
+SHA256sum: 20ca27ad65b3f74a4395c748cc02c85c8741ecc732afaaa81a934edb6de92616
+Description:  A Perl Compatible Regular Expression library
+
+Package: libsodium
+Version: 1.0.18-1
+Depends: libc, libpthread
+Source: package/custom/packages/libsodium
+SourceName: libsodium
+License: ISC
+Section: libs
+Maintainer: Damiano Renfer <damiano.renfer@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 143702
+Filename: libsodium_1.0.18-1_mips_24kc.ipk
+Size: 144811
+SHA256sum: 33b682f13443f2c1cbf296ca0c1b6bccb358550b4d09c9445593e59812fe04f5
+Description:  NaCl (pronounced "salt") is a new easy-to-use high-speed software library for network communication, encryption, decryption, signatures, etc.
+ NaCl's goal is to provide all of the core operations needed to build higher-level cryptographic tools.
+ Sodium is a portable, cross-compilable, installable, packageable fork of NaCl (based on the latest released upstream version nacl-20110221), with a compatible API.
+ The design choices, particularly in regard to the Curve25519 Diffie-Hellman function, emphasize security (whereas NIST curves emphasize "performance" at the cost of security), and "magic constants" in NaCl/Sodium have clear rationales.
+ The same cannot be said of NIST curves, where the specific origins of certain constants are not described by the standards.
+ And despite the emphasis on higher security, primitives are faster across-the-board than most implementations of the NIST standards.
+
+Package: luci-app-chinadns
+Version: 1.6.2-1
+Depends: libc, ChinaDNS
+Source: package/openwrt-dist-luci
+SourceName: luci-app-chinadns
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: all
+Installed-Size: 1642
+Filename: luci-app-chinadns_1.6.2-1_all.ipk
+Size: 2525
+SHA256sum: 3ab4d4d67eaf7638e5a82a4b2d8b6e7eeeb9f60c57614cbf3f2c8516feaa66a6
+Description:  LuCI Support for ChinaDNS.
+
+Package: luci-app-dns-forwarder
+Version: 1.6.2-1
+Depends: libc, dns-forwarder
+Source: package/openwrt-dist-luci
+SourceName: luci-app-dns-forwarder
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: all
+Installed-Size: 1349
+Filename: luci-app-dns-forwarder_1.6.2-1_all.ipk
+Size: 2247
+SHA256sum: 2765a652b9b5d9d31843dd63739ee92580e1cb20f1ee17edb130af9e74f41ca8
+Description:  LuCI Support for Dns-Forwarder.
+
+Package: luci-app-nfs
+Version: 1.0.0-1
+Depends: libc, nfs-kernel-server-utils, luci
+Source: package/luci-app-nfs
+SourceName: luci-app-nfs
+License: GPLv3
+LicenseFiles: LICENSE
+Section: LuCI
+Maintainer: Simon Shi <simonsmh@gmail.com>
+Architecture: all
+Installed-Size: 3823
+Filename: luci-app-nfs_1.0.0-1_all.ipk
+Size: 4777
+SHA256sum: 07ac97d66835c608b81a0f321fb69ef2480456c32076fa2b0f850acfb86750e2
+Description:  LuCI Support for NFS.
+
+Package: luci-app-pdnsd
+Version: 1.2-1
+Depends: libc, pdnsd
+Source: package/luci-app-pdnsd
+SourceName: luci-app-pdnsd
+Section: opt
+Maintainer: Alex Zhuo <1886090@gmail.com>
+Architecture: all
+Installed-Size: 3992
+Filename: luci-app-pdnsd_1.2-1_all.ipk
+Size: 4731
+SHA256sum: eecbd5e08063c6cac5968ae720e5654b661f608842140f78b26e0b8a069d50ae
+Description:  A luci app for pdnsd
+
+Package: luci-app-redsocks2
+Version: 1.6.2-1
+Depends: libc, redsocks2
+Source: package/openwrt-dist-luci
+SourceName: luci-app-redsocks2
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: all
+Installed-Size: 1528
+Filename: luci-app-redsocks2_1.6.2-1_all.ipk
+Size: 2411
+SHA256sum: 9610d8fceaadf3470ca852f8246c850d6e3e6c9d6a7bc8529c53284549cbcabf
+Description:  LuCI Support for RedSocks2.
+
+Package: luci-app-shadowsocks-without-ipset
+Version: 1.9.1-1
+Depends: libc, iptables
+Source: package/luci-app-shadowsocks
+SourceName: luci-app-shadowsocks-without-ipset
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: all
+Installed-Size: 10293
+Filename: luci-app-shadowsocks-without-ipset_1.9.1-1_all.ipk
+Size: 11227
+SHA256sum: 3ce4baea608c3b24cf426b3adad3ca4a37ec76dbd438942c4821692822b778b9
+Description:  LuCI Support for shadowsocks-libev.
+
+Package: luci-app-shadowsocks
+Version: 1.9.1-1
+Depends: libc, iptables, ipset
+Source: package/luci-app-shadowsocks
+SourceName: luci-app-shadowsocks
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: all
+Installed-Size: 10416
+Filename: luci-app-shadowsocks_1.9.1-1_all.ipk
+Size: 11339
+SHA256sum: 8b15efa69f8995a0138abe1233fac52dab2cc4b6d677856854664835b9589432
+Description:  LuCI Support for shadowsocks-libev.
+
+Package: luci-app-shadowvpn
+Version: 1.6.2-1
+Depends: libc, ShadowVPN
+Source: package/openwrt-dist-luci
+SourceName: luci-app-shadowvpn
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: all
+Installed-Size: 1804
+Filename: luci-app-shadowvpn_1.6.2-1_all.ipk
+Size: 2690
+SHA256sum: c6b0c87c0ebccffc82496891dbfa4f2e085dfed639d905ef49e1a97183cfe0ef
+Description:  LuCI Support for ShadowVPN.
+
+Package: luci-app-transparent-proxy
+Version: 0.1.0-1
+Depends: libc, iptables, ipset
+Source: package/luci-app-transparent-proxy
+SourceName: luci-app-transparent-proxy
+License: GPLv3
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: Ian Li <OpenSource@ianli.xyz>
+Architecture: all
+Installed-Size: 7753
+Filename: luci-app-transparent-proxy_0.1.0-1_all.ipk
+Size: 8682
+SHA256sum: b8c9d9afcded77c5c99159ac53097dbf3b53c90e935872fe2c375ace5ebae5d7
+Description:  LuCI helper for iptables transparent proxy.
+
+Package: luci-app-v2ray
+Version: 1.5.3-1
+Depends: libc, jshn, luci-lib-jsonc, ip, ipset, iptables, iptables-mod-tproxy, resolveip, dnsmasq-full
+Source: package/luci-app-v2ray
+SourceName: luci-app-v2ray
+License: MIT
+Section: luci
+Maintainer: Xingwang Liao <kuoruan@gmail.com>
+Architecture: all
+Installed-Size: 84334
+Filename: luci-app-v2ray_1.5.3-1_all.ipk
+Size: 84292
+SHA256sum: d9bae388fa38da11dbd6e0029ec9c002dc45ceb8169842594dee376d24e5e419
+Description:  LuCI support for V2Ray
+
+Package: luci-app-vlmcsd
+Version: 1.0.1-1
+Depends: libc, vlmcsd
+Source: package/luci-app-vlmcsd
+SourceName: luci-app-vlmcsd
+License: MIT
+LicenseFiles: LICENSE
+Section: luci
+Maintainer: fuyumi
+Architecture: all
+Installed-Size: 1628
+Filename: luci-app-vlmcsd_1.0.1-1_all.ipk
+Size: 2480
+SHA256sum: 54f4f1449cf2e991e04f1d2403ba148ac630d2975601489767400f2c50b24221
+Description:  This package contains LuCI configuration pages for openwrt-vlmcsd.
+
+Package: luci-i18n-v2ray-zh-cn
+Version: 1.5.3-1
+Depends: libc, luci-app-v2ray
+Source: package/luci-app-v2ray
+SourceName: luci-i18n-v2ray-zh-cn
+License: MIT
+Section: luci
+Maintainer: Xingwang Liao <kuoruan@gmail.com>
+Architecture: all
+Installed-Size: 5944
+Filename: luci-i18n-v2ray-zh-cn_1.5.3-1_all.ipk
+Size: 6750
+SHA256sum: cbc55bb614e08b4ce21af6d97bee41194a3866fc66256cc37f67a30c37e8cccf
+Description:  Translation for luci-app-v2ray - 中文 (Chinese)
+
+Package: mbedtls-util
+Version: 2.16.2-2
+Depends: libc, libmbedtls12
+Source: package/custom/base/mbedtls
+SourceName: mbedtls-util
+License: GPL-2.0+
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 6897
+Filename: mbedtls-util_2.16.2-2_mips_24kc.ipk
+Size: 7748
+SHA256sum: d56aec638e23fb42c0817fbb856901439c029003159474c195e36be4f4b5c30a
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains mbedtls helper programs for private key and
+ CSR generation (gen_key, cert_req)
+
+Package: pdnsd
+Version: 1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d
+Depends: libc, libpthread
+Source: package/pdnsd/pdnsd
+SourceName: pdnsd
+Section: net
+Architecture: mips_24kc
+Installed-Size: 83350
+Filename: pdnsd_1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_mips_24kc.ipk
+Size: 84101
+SHA256sum: 2e25a3445c8038434ce7e92a897109d56037248ca4a37d28c3b51ff5db0521fa
+Description:  pdnsd, is an IPv6 capable proxy DNS server with permanent caching (the cache
+ contents are written to hard disk on exit) that is designed to cope with
+ unreachable or down DNS servers (for example in dial-in networking).
+ 
+ pdnsd can be used with applications that do dns lookups, eg on startup, and
+ can't be configured to change that behaviour, to prevent the often
+ minute-long hangs (or even crashes) that result from stalled dns queries.
+
+Package: shadowsocks-libev-server
+Version: 3.3.4-1
+Depends: libc, libpthread, libev, libpcre, libcares, libsodium, libmbedtls12
+Source: package/shadowsocks-libev
+SourceName: shadowsocks-libev-server
+License: GPLv3
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: mips_24kc
+Installed-Size: 60966
+Filename: shadowsocks-libev-server_3.3.4-1_mips_24kc.ipk
+Size: 61235
+SHA256sum: 9000d6bc9b20ac3e97e20a3ace9dc9e7b217962a7da723db3fa53fdc16bccd87
+Description:  Shadowsocks-libev is a lightweight secured socks5 proxy for embedded devices and low end boxes.
+
+Package: shadowsocks-libev
+Version: 3.3.4-1
+Depends: libc, libpthread, libev, libpcre, libcares, libsodium, libmbedtls12
+Source: package/shadowsocks-libev
+SourceName: shadowsocks-libev
+License: GPLv3
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: mips_24kc
+Installed-Size: 156489
+Filename: shadowsocks-libev_3.3.4-1_mips_24kc.ipk
+Size: 155655
+SHA256sum: 5500c5db256529882024a1785d6a8a5da0da136819c4ea81236e44f6ff0734e1
+Description:  Shadowsocks-libev is a lightweight secured socks5 proxy for embedded devices and low end boxes.
+
+Package: simple-obfs-server
+Version: 0.0.5-4
+Depends: libc, libpthread, libev
+Source: package/simple-obfs
+SourceName: simple-obfs-server
+License: GPLv3
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: mips_24kc
+Installed-Size: 29319
+Filename: simple-obfs-server_0.0.5-4_mips_24kc.ipk
+Size: 29780
+SHA256sum: 1d805d1b8abc9ccd7e3ed228cc1bb1df4f0b7c5639132915445f033727c75d5f
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: simple-obfs
+Version: 0.0.5-4
+Depends: libc, libpthread, libev
+Source: package/simple-obfs
+SourceName: simple-obfs
+License: GPLv3
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: mips_24kc
+Installed-Size: 27586
+Filename: simple-obfs_0.0.5-4_mips_24kc.ipk
+Size: 28143
+SHA256sum: 8168a8fd9c5dcda9007fdff1960c835d50086a6e799d6fd6c757a8153e2c9fe2
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: v2ray-core
+Version: 4.22.1-4
+Depends: libc, ca-certificates
+Source: package/v2ray-core
+SourceName: v2ray-core
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Xingwang Liao <kuoruan@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 13122040
+Filename: v2ray-core_4.22.1-4_mips_24kc.ipk
+Size: 13030651
+SHA256sum: 636a1776e85d94c0557c24aa800ffb282e058e29287474492539821cfba0ccf6
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This package contains v2ray, v2ctl and v2ray-assets.
+
+Package: v2ray-plugin
+Version: 1.2.0-20191007
+Depends: libc
+Source: package/v2ray-plugin
+SourceName: v2ray-plugin
+Section: net
+Maintainer: chenhw2 <https://github.com/chenhw2>
+Architecture: mips_24kc
+Installed-Size: 3381863
+Filename: v2ray-plugin_1.2.0-20191007_mips_24kc.ipk
+Size: 3383189
+SHA256sum: 3f5a94b74efe31134451319dd9147c4dd44046290c749ebde5624c802449d20c
+Description:  Yet another SIP003 plugin for shadowsocks, based on v2ray
+
+Package: vlmcsd
+Version: svn1112-1
+Depends: libc, libpthread
+Source: package/vlmcsd
+SourceName: vlmcsd
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+Maintainer: fuyumi <280604399@qq.com>
+Architecture: mips_24kc
+Installed-Size: 49956
+Filename: vlmcsd_svn1112-1_mips_24kc.ipk
+Size: 50656
+SHA256sum: 01e412ae5d6c54b031141e242bd3670317a8fa932c5f7a18f829fc3eeb64b07b
+Description:  vlmcsd is a KMS Emulator in C.
+
