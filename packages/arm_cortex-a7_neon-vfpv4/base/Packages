@@ -1,0 +1,358 @@
+Package: ChinaDNS
+Version: 1.3.3-1
+Depends: libc
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 36584
+Filename: ChinaDNS_1.3.3-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 36185
+SHA256sum: 2c1c92184336d30a0b48c7b1c05efc3ce48bcb1761e5213824d786f9a4bda7a6
+Description:  Protect yourself against DNS poisoning in China.
+
+Package: dns-forwarder
+Version: 1.2.1-2
+Depends: libc
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 8331
+Filename: dns-forwarder_1.2.1-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 9120
+SHA256sum: 69058c91bd13e58d01b5a8549705a6306b971f5bac0395208db59f027e919bf1
+Description:  Forwarding DNS queries on TCP transport.
+
+Package: libcares
+Version: 1.15.0-4
+Depends: libc
+License: MIT
+Section: libs
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 29480
+Filename: libcares_1.15.0-4_arm_cortex-a7_neon-vfpv4.ipk
+Size: 30341
+SHA256sum: 579a81e7816dd8e90d61b37ad73cc3748f34cc2b203a950c67fc00951fcc780a
+Description:  c-ares is a C library for asynchronous DNS requests (including name resolves)
+ 
+ C89 compatibility, MIT licensed, builds for and runs on POSIX, Windows,
+ Netware, Android and many more operating systems.
+ 
+
+Package: libev
+Version: 4.27-1
+Depends: libc
+License: BSD-2-Clause
+Section: libs
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 19191
+Filename: libev_4.27-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 19945
+SHA256sum: fb635ba1416baa1ddd99b7df912dac57a073f04ecbfb1f68d5110fe43515783d
+Description:  A full-featured and high-performance event loop that is loosely modelled after
+ libevent, but without its limitations and bugs.
+
+Package: libmbedtls12
+Version: 2.16.2-2
+Depends: libc
+Provides: libmbedtls
+License: GPL-2.0+
+Section: libs
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 165816
+Filename: libmbedtls12_2.16.2-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 166344
+SHA256sum: 098d4ec2684cdd7fe9250656b2a7fe03fef571e7ddfae27848d95b4fbce987ba
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains the mbedtls library.
+
+Package: libpcre
+Version: 8.43-1
+Depends: libc
+License: BSD-3-Clause
+Section: libs
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 81345
+Filename: libpcre_8.43-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 82058
+SHA256sum: e72a9a2d192a55dfd5642136d43c52a2c9a8101c02f0b61a2c24787c2cb36220
+Description:  A Perl Compatible Regular Expression library
+
+Package: libsodium
+Version: 1.0.18-1
+Depends: libc, libpthread
+License: ISC
+Section: libs
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 111018
+Filename: libsodium_1.0.18-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 112170
+SHA256sum: 589aeb96c7fff60015b83e9c233ca15b2ce86f07f5bb1d12151a80ebe48ef18e
+Description:  NaCl (pronounced "salt") is a new easy-to-use high-speed software library for network communication, encryption, decryption, signatures, etc.
+ NaCl's goal is to provide all of the core operations needed to build higher-level cryptographic tools.
+ Sodium is a portable, cross-compilable, installable, packageable fork of NaCl (based on the latest released upstream version nacl-20110221), with a compatible API.
+ The design choices, particularly in regard to the Curve25519 Diffie-Hellman function, emphasize security (whereas NIST curves emphasize "performance" at the cost of security), and "magic constants" in NaCl/Sodium have clear rationales.
+ The same cannot be said of NIST curves, where the specific origins of certain constants are not described by the standards.
+ And despite the emphasis on higher security, primitives are faster across-the-board than most implementations of the NIST standards.
+
+Package: luci-app-chinadns
+Version: 1.6.2-1
+Depends: libc, ChinaDNS
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 1642
+Filename: luci-app-chinadns_1.6.2-1_all.ipk
+Size: 2525
+SHA256sum: 3ab4d4d67eaf7638e5a82a4b2d8b6e7eeeb9f60c57614cbf3f2c8516feaa66a6
+Description:  LuCI Support for ChinaDNS.
+
+Package: luci-app-dns-forwarder
+Version: 1.6.2-1
+Depends: libc, dns-forwarder
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 1349
+Filename: luci-app-dns-forwarder_1.6.2-1_all.ipk
+Size: 2247
+SHA256sum: 2765a652b9b5d9d31843dd63739ee92580e1cb20f1ee17edb130af9e74f41ca8
+Description:  LuCI Support for Dns-Forwarder.
+
+Package: luci-app-nfs
+Version: 1.0.0-1
+Depends: libc, nfs-kernel-server-utils, luci
+License: GPLv3
+Section: LuCI
+Architecture: all
+Installed-Size: 3823
+Filename: luci-app-nfs_1.0.0-1_all.ipk
+Size: 4777
+SHA256sum: 07ac97d66835c608b81a0f321fb69ef2480456c32076fa2b0f850acfb86750e2
+Description:  LuCI Support for NFS.
+
+Package: luci-app-pdnsd
+Version: 1.2-1
+Depends: libc, pdnsd
+Section: opt
+Architecture: all
+Installed-Size: 3992
+Filename: luci-app-pdnsd_1.2-1_all.ipk
+Size: 4731
+SHA256sum: eecbd5e08063c6cac5968ae720e5654b661f608842140f78b26e0b8a069d50ae
+Description:  A luci app for pdnsd
+
+Package: luci-app-redsocks2
+Version: 1.6.2-1
+Depends: libc, redsocks2
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 1528
+Filename: luci-app-redsocks2_1.6.2-1_all.ipk
+Size: 2411
+SHA256sum: 9610d8fceaadf3470ca852f8246c850d6e3e6c9d6a7bc8529c53284549cbcabf
+Description:  LuCI Support for RedSocks2.
+
+Package: luci-app-shadowsocks-without-ipset
+Version: 1.9.1-1
+Depends: libc, iptables
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 10293
+Filename: luci-app-shadowsocks-without-ipset_1.9.1-1_all.ipk
+Size: 11227
+SHA256sum: 3ce4baea608c3b24cf426b3adad3ca4a37ec76dbd438942c4821692822b778b9
+Description:  LuCI Support for shadowsocks-libev.
+
+Package: luci-app-shadowsocks
+Version: 1.9.1-1
+Depends: libc, iptables, ipset
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 10416
+Filename: luci-app-shadowsocks_1.9.1-1_all.ipk
+Size: 11339
+SHA256sum: 8b15efa69f8995a0138abe1233fac52dab2cc4b6d677856854664835b9589432
+Description:  LuCI Support for shadowsocks-libev.
+
+Package: luci-app-shadowvpn
+Version: 1.6.2-1
+Depends: libc, ShadowVPN
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 1804
+Filename: luci-app-shadowvpn_1.6.2-1_all.ipk
+Size: 2690
+SHA256sum: c6b0c87c0ebccffc82496891dbfa4f2e085dfed639d905ef49e1a97183cfe0ef
+Description:  LuCI Support for ShadowVPN.
+
+Package: luci-app-transparent-proxy
+Version: 0.1.0-1
+Depends: libc, iptables, ipset
+License: GPLv3
+Section: luci
+Architecture: all
+Installed-Size: 7753
+Filename: luci-app-transparent-proxy_0.1.0-1_all.ipk
+Size: 8682
+SHA256sum: b8c9d9afcded77c5c99159ac53097dbf3b53c90e935872fe2c375ace5ebae5d7
+Description:  LuCI helper for iptables transparent proxy.
+
+Package: luci-app-v2ray
+Version: 1.5.3-1
+Depends: libc, jshn, luci-lib-jsonc, ip, ipset, iptables, iptables-mod-tproxy, resolveip, dnsmasq-full
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 84334
+Filename: luci-app-v2ray_1.5.3-1_all.ipk
+Size: 84292
+SHA256sum: d9bae388fa38da11dbd6e0029ec9c002dc45ceb8169842594dee376d24e5e419
+Description:  LuCI support for V2Ray
+
+Package: luci-app-vlmcsd
+Version: 1.0.1-1
+Depends: libc, vlmcsd
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1628
+Filename: luci-app-vlmcsd_1.0.1-1_all.ipk
+Size: 2480
+SHA256sum: 54f4f1449cf2e991e04f1d2403ba148ac630d2975601489767400f2c50b24221
+Description:  This package contains LuCI configuration pages for openwrt-vlmcsd.
+
+Package: luci-i18n-v2ray-zh-cn
+Version: 1.5.3-1
+Depends: libc, luci-app-v2ray
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 5944
+Filename: luci-i18n-v2ray-zh-cn_1.5.3-1_all.ipk
+Size: 6750
+SHA256sum: cbc55bb614e08b4ce21af6d97bee41194a3866fc66256cc37f67a30c37e8cccf
+Description:  Translation for luci-app-v2ray - 中文 (Chinese)
+
+Package: mbedtls-util
+Version: 2.16.2-2
+Depends: libc, libmbedtls12
+License: GPL-2.0+
+Section: utils
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 7157
+Filename: mbedtls-util_2.16.2-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 8010
+SHA256sum: ffd554b334761aab263d79ee3b1f19fcbdeab7065b5e3dee08a3b2e8e697790b
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains mbedtls helper programs for private key and
+ CSR generation (gen_key, cert_req)
+
+Package: pdnsd
+Version: 1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d
+Depends: libc, libpthread
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 94884
+Filename: pdnsd_1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_arm_cortex-a7_neon-vfpv4.ipk
+Size: 95790
+SHA256sum: eb2b444dd31c54a275de90ba684ee289e9d010a6db149fee487a8f301e8245cb
+Description:  pdnsd, is an IPv6 capable proxy DNS server with permanent caching (the cache
+ contents are written to hard disk on exit) that is designed to cope with
+ unreachable or down DNS servers (for example in dial-in networking).
+ 
+ pdnsd can be used with applications that do dns lookups, eg on startup, and
+ can't be configured to change that behaviour, to prevent the often
+ minute-long hangs (or even crashes) that result from stalled dns queries.
+
+Package: shadowsocks-libev-server
+Version: 3.3.4-1
+Depends: libc, libpthread, libev, libpcre, libcares, libsodium, libmbedtls12
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 61735
+Filename: shadowsocks-libev-server_3.3.4-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 62591
+SHA256sum: f11cc3bf80e7bd5f6f1d16ce5324f28da754bd13f2324fca0b6e5e58d5ce1fd2
+Description:  Shadowsocks-libev is a lightweight secured socks5 proxy for embedded devices and low end boxes.
+
+Package: shadowsocks-libev
+Version: 3.3.4-1
+Depends: libc, libpthread, libev, libpcre, libcares, libsodium, libmbedtls12
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 159675
+Filename: shadowsocks-libev_3.3.4-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 160108
+SHA256sum: 066c6a13ee1759cb224b2bc7ed9f6602a07fab73fc0e3696f966766263547870
+Description:  Shadowsocks-libev is a lightweight secured socks5 proxy for embedded devices and low end boxes.
+
+Package: simple-obfs-server
+Version: 0.0.5-4
+Depends: libc, libpthread, libev
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 29569
+Filename: simple-obfs-server_0.0.5-4_arm_cortex-a7_neon-vfpv4.ipk
+Size: 30371
+SHA256sum: ea092d5b8eec105d30cb405650e3f8ff64914e77159aeea205f2b4e9ae61e988
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: simple-obfs
+Version: 0.0.5-4
+Depends: libc, libpthread, libev
+License: GPLv3
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 27146
+Filename: simple-obfs_0.0.5-4_arm_cortex-a7_neon-vfpv4.ipk
+Size: 27968
+SHA256sum: 19cfe3c9358f31d18f9d06dc9019fc44016c47e7f7871c572f4b0a9309811234
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: v2ray-core
+Version: 4.22.1-4
+Depends: libc, ca-certificates
+License: MIT
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 13428170
+Filename: v2ray-core_4.22.1-4_arm_cortex-a7_neon-vfpv4.ipk
+Size: 13344898
+SHA256sum: 4c54e1c26a0912e4d2ed88fca945191290cad2b9c5206821a8cbeb94bf87688f
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This package contains v2ray, v2ctl and v2ray-assets.
+
+Package: v2ray-plugin
+Version: 1.2.0-20191007
+Depends: libc
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 3379518
+Filename: v2ray-plugin_1.2.0-20191007_arm_cortex-a7_neon-vfpv4.ipk
+Size: 3380894
+SHA256sum: a2c7ab77bebefb374c867a7354ed368ede1edcbca078d4a24430668ef72fedda
+Description:  Yet another SIP003 plugin for shadowsocks, based on v2ray
+
+Package: vlmcsd
+Version: svn1112-1
+Depends: libc, libpthread
+License: MIT
+Section: net
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 53431
+Filename: vlmcsd_svn1112-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 54071
+SHA256sum: 41c2cadb17ac8caaeca6d0009dd71d9c26a6a0a0742fad49d5dec686b946adf3
+Description:  vlmcsd is a KMS Emulator in C.
+

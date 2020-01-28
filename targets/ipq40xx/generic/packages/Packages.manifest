@@ -1,0 +1,86 @@
+Package: libatomic1
+Version: 7.4.0-2
+Depends: libgcc1
+Provides: libatomic
+Source: package/toolchain
+SourceName: libatomic
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 4969
+Filename: libatomic1_7.4.0-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 5707
+SHA256sum: 88933e693629a0dc3fc00708802d053da93ec7d94f71f0be5e11e91b75bc0053
+Description:  Atomic support library
+
+Package: libgcc1
+Version: 7.4.0-2
+Provides: libgcc
+Source: package/toolchain
+SourceName: libgcc
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 21815
+Filename: libgcc1_7.4.0-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 22540
+SHA256sum: 1ec4dbec38a301f3b81b65b9c95873cf6b5ee204dcdd0fe7cc24d9989a03332b
+Description:  GCC support library
+
+Package: libpthread
+Version: 1.1.24-2
+Depends: libgcc1
+Source: package/toolchain
+SourceName: libpthread
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 117
+Filename: libpthread_1.1.24-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 865
+SHA256sum: f1d0158a9347600428e42ca8aaffcbbda4dadc1715a4bd4f1d4e26fac03aa1f2
+Description:  POSIX thread library
+
+Package: librt
+Version: 1.1.24-2
+Depends: libpthread
+Source: package/toolchain
+SourceName: librt
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 117
+Filename: librt_1.1.24-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 878
+SHA256sum: c7d2728d70e5e108c223423d2e17ada2baf41b73ea64d67758dce72c44a974bb
+Description:  POSIX.1b RealTime extension library
+
+Package: libstdcpp6
+Version: 7.4.0-2
+Provides: libstdcpp
+Source: package/toolchain
+SourceName: libstdcpp
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 335393
+Filename: libstdcpp6_7.4.0-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 333069
+SHA256sum: f6b577f4ad57a11f215330aab192aee102ff1796e9856af26b4939c352d860ef
+Description:  GNU Standard C++ Library v3
+
