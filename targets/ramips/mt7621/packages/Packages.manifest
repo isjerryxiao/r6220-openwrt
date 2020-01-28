@@ -1,0 +1,86 @@
+Package: libatomic1
+Version: 7.4.0-2
+Depends: libgcc1
+Provides: libatomic
+Source: package/toolchain
+SourceName: libatomic
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mipsel_24kc
+Installed-Size: 5392
+Filename: libatomic1_7.4.0-2_mipsel_24kc.ipk
+Size: 6152
+SHA256sum: 21d0aeba0e3dc666114053398e787aba9e813c1a1d5d0d44b7f204ae7f10d809
+Description:  Atomic support library
+
+Package: libgcc1
+Version: 7.4.0-2
+Provides: libgcc
+Source: package/toolchain
+SourceName: libgcc
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mipsel_24kc
+Installed-Size: 34023
+Filename: libgcc1_7.4.0-2_mipsel_24kc.ipk
+Size: 34824
+SHA256sum: ea6f9be66d1570ee78210ca8f8e3a017d2ec62c3d711c13459a03183b91dca11
+Description:  GCC support library
+
+Package: libpthread
+Version: 1.1.24-2
+Depends: libgcc1
+Source: package/toolchain
+SourceName: libpthread
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mipsel_24kc
+Installed-Size: 117
+Filename: libpthread_1.1.24-2_mipsel_24kc.ipk
+Size: 860
+SHA256sum: 3e5c0a75b4a0252c9fc2e2546719ed784928e3ac4805e25f8b25640f33bbc630
+Description:  POSIX thread library
+
+Package: librt
+Version: 1.1.24-2
+Depends: libpthread
+Source: package/toolchain
+SourceName: librt
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mipsel_24kc
+Installed-Size: 117
+Filename: librt_1.1.24-2_mipsel_24kc.ipk
+Size: 865
+SHA256sum: f217f7e4003dee91230704b57f17266119d35b3523121d47d2174da3cb597135
+Description:  POSIX.1b RealTime extension library
+
+Package: libstdcpp6
+Version: 7.4.0-2
+Provides: libstdcpp
+Source: package/toolchain
+SourceName: libstdcpp
+License: GPL-3.0-with-GCC-exception
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mipsel_24kc
+Installed-Size: 372208
+Filename: libstdcpp6_7.4.0-2_mipsel_24kc.ipk
+Size: 370871
+SHA256sum: 75412d6a31bd42c35b798a8126966780c487fd0139ee85b8ce7ff802794af79d
+Description:  GNU Standard C++ Library v3
+
