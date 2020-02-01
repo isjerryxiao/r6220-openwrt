@@ -64,7 +64,7 @@ before_script:
 
 script:
 - make defconfig
-- make V=s
+- make
 
 
 after_success:
